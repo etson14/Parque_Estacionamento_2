@@ -19,10 +19,12 @@ public class Parque_Estacionamento_2 extends Application {
     
     @Override
     public void start(Stage stage) throws Exception {
-        Parent root = FXMLLoader.load(getClass().getResource("FXMLDocument.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("view/TelaLogin.fxml"));
         
         Scene scene = new Scene(root);
-        
+       
+        stage.setTitle("Login");
+        stage.setResizable(false);
         stage.setScene(scene);
         stage.show();
     }
