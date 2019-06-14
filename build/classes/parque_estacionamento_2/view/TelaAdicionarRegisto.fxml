@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import java.net.URL?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="486.0" prefWidth="587.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="parque_estacionamento_2.controller.TelaAdicionarRegistoController">
+    <stylesheets>
+        <URL value="@/parque_estacionamento_2/content/telaadicionarregisto.css" />
+    </stylesheets>
+   <children>
+      <Label layoutX="54.0" layoutY="72.0" text="Numero Matricula*" />
+      <TextField layoutX="202.0" layoutY="67.0" prefHeight="27.0" prefWidth="337.0" style="-fx-background-color: #eee8e8;" />
+      <TextField disable="true" layoutX="202.0" layoutY="127.0" prefHeight="27.0" prefWidth="337.0" style="-fx-background-color: #eee8e8;" />
+      <TextField layoutX="202.0" layoutY="248.0" prefHeight="27.0" prefWidth="337.0" style="-fx-background-color: #eee8e8;" />
+      <Label layoutX="54.0" layoutY="132.0" text="Data*" />
+      <Label layoutX="54.0" layoutY="193.0" text="Tipo*" />
+      <Label layoutX="54.0" layoutY="253.0" text="Condutor*" />
+      <Label layoutX="54.0" layoutY="315.0" text="Veiculo*" />
+      <JFXButton fx:id="btnCancelar" layoutX="387.0" layoutY="425.0" style="-fx-background-color: black;" text="Cancelar" textFill="#e7e1e1" />
+      <JFXButton fx:id="btnGuardar" layoutX="468.0" layoutY="425.0" prefHeight="27.0" prefWidth="73.0" style="-fx-background-color: #981f33;" text="Guardar" textFill="WHITE" />
+      <ComboBox fx:id="cbTipo1" layoutX="200.0" layoutY="190.0" prefHeight="27.0" prefWidth="337.0" style="-fx-background-color: #eee8e8;" />
+      <TextField layoutX="202.0" layoutY="311.0" prefHeight="27.0" prefWidth="337.0" style="-fx-background-color: #eee8e8;" />
+      <Label layoutX="54.0" layoutY="375.0" text="Seguranca*" />
+      <TextField layoutX="202.0" layoutY="371.0" prefHeight="27.0" prefWidth="337.0" style="-fx-background-color: #eee8e8;" />
+   </children>
+</AnchorPane>

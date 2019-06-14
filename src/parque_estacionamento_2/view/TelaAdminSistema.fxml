@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import java.net.URL?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" fx:id="apAdminSistema" prefHeight="600.0" prefWidth="1100.0" style="-fx-background-color: white;" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="parque_estacionamento_2.controller.TelaAdminSistemaController">
+    <stylesheets>
+        <URL value="@/parque_estacionamento_2/content/telaadminsistema.css" />
+    </stylesheets>
+   <children>
+      <Pane layoutX="19.0" layoutY="84.0" prefHeight="1.0" prefWidth="1080.0" style="-fx-background-color: black;" AnchorPane.leftAnchor="-1.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="84.0" />
+      <ImageView fitHeight="63.0" fitWidth="128.0" layoutX="10.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/acima.png" />
+         </image>
+      </ImageView>
+      <Text fill="#981f33" layoutX="73.0" layoutY="52.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Uni-Piaget">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Text>
+      <TableView fx:id="tabelaUtilizador" layoutX="8.0" layoutY="160.0" prefHeight="431.0" prefWidth="1080.0" AnchorPane.bottomAnchor="9.0" AnchorPane.leftAnchor="8.0" AnchorPane.rightAnchor="10.0">
+        <columns>
+          <TableColumn fx:id="colunaID" prefWidth="62.0" />
+            <TableColumn fx:id="colunaNome" prefWidth="246.0" />
+            <TableColumn fx:id="colunaApelido" prefWidth="166.0" />
+            <TableColumn fx:id="colunaUtilizador" prefWidth="166.0" />
+            <TableColumn fx:id="colunaSenha" prefWidth="166.0" />
+            <TableColumn fx:id="colunaTipo" prefWidth="175.0" />
+            <TableColumn fx:id="colunaEstado" prefWidth="166.0" />
+        </columns>
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+      </TableView>
+      <Pane layoutX="7.0" layoutY="147.0" prefHeight="40.0" prefWidth="1080.0" style="-fx-background-color: #981f33;" AnchorPane.leftAnchor="7.0" AnchorPane.rightAnchor="9.0">
+         <children>
+            <Text fill="WHITE" layoutX="73.0" layoutY="26.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ID" />
+            <Text fill="WHITE" layoutX="214.0" layoutY="25.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nome" />
+            <Text fill="WHITE" layoutX="361.0" layoutY="25.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Apelido" />
+            <Text fill="WHITE" layoutX="514.0" layoutY="25.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Utilizador" />
+            <Text fill="WHITE" layoutX="674.0" layoutY="25.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Senha" />
+            <Text fill="WHITE" layoutX="836.0" layoutY="25.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tipo" />
+            <Text fill="WHITE" layoutX="984.0" layoutY="25.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Estado" />
+            <Text fill="WHITE" layoutX="153.0" layoutY="30.0" strokeType="OUTSIDE" strokeWidth="0.0" text="I" />
+            <Text fill="WHITE" layoutX="153.0" layoutY="21.0" strokeType="OUTSIDE" strokeWidth="0.0" text="I" />
+            <Text fill="WHITE" layoutX="308.0" layoutY="30.0" strokeType="OUTSIDE" strokeWidth="0.0" text="I" />
+            <Text fill="WHITE" layoutX="308.0" layoutY="21.0" strokeType="OUTSIDE" strokeWidth="0.0" text="I" />
+            <Text fill="WHITE" layoutX="461.0" layoutY="30.0" strokeType="OUTSIDE" strokeWidth="0.0" text="I" />
+            <Text fill="WHITE" layoutX="461.0" layoutY="21.0" strokeType="OUTSIDE" strokeWidth="0.0" text="I" />
+            <Text fill="WHITE" layoutX="616.0" layoutY="30.0" strokeType="OUTSIDE" strokeWidth="0.0" text="I" />
+            <Text fill="WHITE" layoutX="616.0" layoutY="21.0" strokeType="OUTSIDE" strokeWidth="0.0" text="I" />
+            <Text fill="WHITE" layoutX="770.0" layoutY="30.0" strokeType="OUTSIDE" strokeWidth="0.0" text="I" />
+            <Text fill="WHITE" layoutX="770.0" layoutY="21.0" strokeType="OUTSIDE" strokeWidth="0.0" text="I" />
+            <Text fill="WHITE" layoutX="925.0" layoutY="30.0" strokeType="OUTSIDE" strokeWidth="0.0" text="I" />
+            <Text fill="WHITE" layoutX="925.0" layoutY="21.0" strokeType="OUTSIDE" strokeWidth="0.0" text="I" />
+         </children></Pane>
+      <JFXButton fx:id="btnCriarConta" layoutX="773.0" layoutY="101.0" onAction="#inserirConta" prefHeight="30.0" prefWidth="91.0" style="-fx-background-color: #049022;" text="Criar Conta" textFill="WHITE" AnchorPane.topAnchor="101.0" />
+      <JFXButton fx:id="btnEditarConta" layoutX="872.0" layoutY="101.0" onAction="#actualizarConta" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: #727171;" text="Editar Conta" textFill="WHITE" />
+      <JFXButton fx:id="btnEliminarConta" layoutX="981.0" layoutY="101.0" onAction="#eliminarConta" prefHeight="30.0" prefWidth="109.0" style="-fx-background-color: #e70b0b;" text="Eliminar Conta" textFill="WHITE" AnchorPane.rightAnchor="10.0" />
+      <Label layoutX="980.0" layoutY="47.0" text="EDSON TAVARES" />
+      <Label layoutX="1030.0" layoutY="26.0" text="ADMIN" wrapText="true">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <MenuButton layoutX="927.0" layoutY="31.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="42.0" style="-fx-background-color: white;">
+        <items>
+          <MenuItem mnemonicParsing="false" text="Mudar Palavra-Passe" />
+          <MenuItem mnemonicParsing="false" text="Sair" />
+        </items>
+      </MenuButton>
+   </children>
+</AnchorPane>

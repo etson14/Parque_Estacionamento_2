@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import java.net.URL?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="395.0" prefWidth="979.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.171" fx:controller="parque_estacionamento_2.controller.TelaAdicionarCondutorController">
+    <stylesheets>
+        <URL value="@/parque_estacionamento_2/content/telaadicionarcondutor.css" />
+    </stylesheets>
+   <children>
+      <Label layoutX="54.0" layoutY="72.0" text="Nome*" />
+      <TextField layoutX="202.0" layoutY="67.0" prefHeight="27.0" prefWidth="240.0" style="-fx-background-color: #eee8e8;" />
+      <TextField layoutX="202.0" layoutY="127.0" prefHeight="27.0" prefWidth="240.0" style="-fx-background-color: #eee8e8;" />
+      <TextField layoutX="672.0" layoutY="67.0" prefHeight="27.0" prefWidth="240.0" style="-fx-background-color: #eee8e8;" />
+      <TextField layoutX="672.0" layoutY="127.0" prefHeight="27.0" prefWidth="240.0" style="-fx-background-color: #eee8e8;" />
+      <Label layoutX="54.0" layoutY="132.0" text="Apelido*" />
+      <Label layoutX="524.0" layoutY="73.0" text="BI*" />
+      <Label layoutX="524.0" layoutY="133.0" text="NIF*" />
+      <JFXButton fx:id="btnCancelar" layoutX="757.0" layoutY="315.0" style="-fx-background-color: black;" text="Cancelar" textFill="#e7e1e1" />
+      <JFXButton fx:id="btnGuardar" layoutX="838.0" layoutY="315.0" prefHeight="27.0" prefWidth="73.0" style="-fx-background-color: #981f33;" text="Guardar" textFill="WHITE" />
+      <TextField layoutX="202.0" layoutY="187.0" prefHeight="27.0" prefWidth="240.0" style="-fx-background-color: #eee8e8;" />
+      <TextField layoutX="202.0" layoutY="247.0" prefHeight="27.0" prefWidth="240.0" style="-fx-background-color: #eee8e8;" />
+      <Label layoutX="54.0" layoutY="193.0" text="Sexo*" />
+      <Label layoutX="54.0" layoutY="253.0" text="Data Nascimento" />
+      <Label layoutX="524.0" layoutY="183.0" text="Tipo*" />
+      <TextField layoutX="672.0" layoutY="237.0" prefHeight="27.0" prefWidth="240.0" style="-fx-background-color: #eee8e8;" />
+      <Label layoutX="524.0" layoutY="243.0" text="Cartao*" />
+      <ComboBox fx:id="cbTipo1" layoutX="672.0" layoutY="178.0" prefHeight="27.0" prefWidth="240.0" style="-fx-background-color: #eee8e8;" />
+   </children>
+</AnchorPane>

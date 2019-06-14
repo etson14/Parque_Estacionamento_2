@@ -1,14 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.net.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import com.jfoenix.controls.JFXButton?>
+<?import java.net.URL?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
 
-<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" fx:controller="parque_estacionamento_2.controller.TelaLoginController">
+<AnchorPane id="AnchorPane" fx:id="apLogin" prefHeight="600.0" prefWidth="1100.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="parque_estacionamento_2.controller.TelaLoginController">
     <stylesheets>
-        <URL value="@/parque_estacionamento_2/content/telalogin.css"/>
+        <URL value="@/parque_estacionamento_2/content/telalogin.css" />
     </stylesheets>
+   <children>
+      <JFXButton fx:id="btnEntrar" layoutX="787.0" layoutY="365.0" prefHeight="34.0" prefWidth="100.0" style="-fx-background-color: #981f33;" text="Entrar" textFill="WHITE" />
+      <Pane prefHeight="600.0" prefWidth="550.0" style="-fx-background-color: #981f33;" />
+      <TextField fx:id="txtFieldUtilizador" layoutX="730.0" layoutY="194.0" prefHeight="26.0" prefWidth="214.0" promptText="Utilizador" />
+      <Label fx:id="lblErro" layoutX="761.0" layoutY="325.0" textFill="RED" />
+      <PasswordField fx:id="txtFieldPP" layoutX="730.0" layoutY="273.0" prefHeight="26.0" prefWidth="214.0" promptText="Senha" />
+   </children>
 </AnchorPane>
