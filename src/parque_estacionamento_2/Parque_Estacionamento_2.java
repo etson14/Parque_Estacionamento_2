@@ -14,7 +14,7 @@ public class Parque_Estacionamento_2 extends Application {
     public void start(Stage stage) throws Exception {
         
        
-    Parent root = FXMLLoader.load(getClass().getResource("/parque_estacionamento_2/view/TelaAdminSistema.fxml"));
+    Parent root = FXMLLoader.load(getClass().getResource("/parque_estacionamento_2/view/TelaAdministrativo.fxml"));
         Scene scene = new Scene(root);
        
         stage.setTitle("Parque Estacionamento - Uni Piaget");

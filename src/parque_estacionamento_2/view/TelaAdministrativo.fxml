@@ -20,7 +20,7 @@
             <JFXButton fx:id="btnMP" layoutY="1.0" onAction="#carregarTelaMenuPrincipal" prefHeight="63.0" prefWidth="220.0" text="Menu Principal" textFill="WHITE" />
             <JFXButton fx:id="btnV" layoutY="64.0" onAction="#carregarTelaVeiculo" prefHeight="63.0" prefWidth="220.0" text="Veiculo" textFill="WHITE" />
             <JFXButton fx:id="btnC" layoutY="127.0" onAction="#carregarTelaCondutor" prefHeight="63.0" prefWidth="220.0" text="Condutor" textFill="WHITE" />
-            <JFXButton fx:id="btnR" layoutY="190.0" onAction="#carregarTelaVeiculo" prefHeight="63.0" prefWidth="220.0" text="Registro" textFill="WHITE" />
+            <JFXButton fx:id="btnR" layoutY="190.0" onAction="#carregarTelaRegistro" prefHeight="63.0" prefWidth="220.0" text="Registro" textFill="WHITE" />
             <JFXButton fx:id="btnCartao" layoutY="253.0" onAction="#carregarTelaCartao" prefHeight="63.0" prefWidth="220.0" text="Cartão " textFill="WHITE" />
             <JFXButton fx:id="btnConsultas" layoutY="316.0" prefHeight="63.0" prefWidth="220.0" text="Consultas" textFill="WHITE" />
             <JFXButton fx:id="btnSair" layoutY="379.0" onAction="#Sair" prefHeight="63.0" prefWidth="220.0" text="Sair" textFill="WHITE" />

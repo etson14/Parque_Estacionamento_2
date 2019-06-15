@@ -153,11 +153,12 @@ public class TelaAdminSistemaController implements Initializable {
       
       public boolean showCarregarTelaAdicionarUtilizadores(Utilizador util) throws IOException{
           FXMLLoader loader=new FXMLLoader();
-          loader.setLocation(TelaAdicionarUtilizadoresController.class.getResource("/parque_estacionamento_2/view/TelaAdicionarUtilizadores.fxml"));
+          loader.setLocation(TelaAdicionarUtilizadoresController.class.getResource("/parque_estacionamento_2/view/TelaAdicionarVeiculo.fxml"));
           AnchorPane page=(AnchorPane)loader.load();
           
           Stage dialogstage=new Stage();
           dialogstage.setTitle("Criar Conta");
+          dialogstage.setResizable(false);
           Scene scene=new Scene(page);
           dialogstage.setScene(scene);
           

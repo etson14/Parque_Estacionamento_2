@@ -13,6 +13,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import parque_estacionamento_2.model.domain.Utilizador;
 import parque_estacionamento_2.model.domain.Veiculo;
 
 /**
@@ -59,6 +60,62 @@ public class veiculoDAO {
 
 
     return listaVeiculo;
+    }
+    
+    public boolean insert(Veiculo veiculo){
+        String sql="INSERT INTO Veiculo(n_matricula,marca,modelo,cor)VALUES(?,?,?,?)";
+        
+        PreparedStatement stmt;
+        try {
+            stmt = conexao.prepareStatement(sql);
+            stmt.setString(1, veiculo.getN_matricula());
+            stmt.setString(2, veiculo.getMarca());
+            stmt.setString(3, veiculo.getModelo());
+            stmt.setString(4, veiculo.getCor());
+            stmt.execute();
+            return true;
+        } catch (SQLException ex) {
+            Logger.getLogger(UtilizadorDAO.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
+        return false;
+    }
+    
+    
+    public void delete(Veiculo veiculo){
+        String sql="DELETE FROM Veiculo where idVeiculo=?";
+            
+        try {
+            
+            PreparedStatement stmt =conexao.prepareStatement(sql); 
+            
+            stmt.setInt(1, veiculo.getIdVeiculo());
+            stmt.execute();
+                    
+                    } catch (SQLException ex) {
+            Logger.getLogger(UtilizadorDAO.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
+    }
+    
+    public void update(Veiculo veiculo){
+        String sql="UPDATE Veiculo SET n_matricula=?,marca=?,modelo=?,cor=? WHERE idVeiculo=?";
+        
+        try {
+            PreparedStatement stmt=conexao.prepareStatement(sql);
+            
+            stmt.setString(1, veiculo.getN_matricula());
+            stmt.setString(2, veiculo.getMarca());
+            stmt.setString(3, veiculo.getModelo());
+            stmt.setString(4, veiculo.getCor());
+            stmt.setInt(5,    veiculo.getIdVeiculo());
+            stmt.execute();
+            
+            
+            
+        } catch (SQLException ex) {
+            Logger.getLogger(UtilizadorDAO.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }
 
     

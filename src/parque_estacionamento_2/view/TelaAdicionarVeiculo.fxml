@@ -6,20 +6,20 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane id="AnchorPane" prefHeight="358.0" prefWidth="484.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.171" fx:controller="parque_estacionamento_2.controller.TelaAdicionarVeiculoController">
+<AnchorPane id="AnchorPane" prefHeight="358.0" prefWidth="484.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="parque_estacionamento_2.controller.TelaAdicionarVeiculoController">
     <stylesheets>
         <URL value="@/parque_estacionamento_2/content/telaadicionarveiculo.css" />
     </stylesheets>
     <children>
       <Label layoutX="44.0" layoutY="62.0" text="Numero Matricula*" />
-      <TextField layoutX="192.0" layoutY="57.0" prefHeight="27.0" prefWidth="240.0" style="-fx-background-color: #eee8e8;" />
-      <TextField layoutX="192.0" layoutY="117.0" prefHeight="27.0" prefWidth="240.0" style="-fx-background-color: #eee8e8;" />
-      <TextField layoutX="192.0" layoutY="177.0" prefHeight="27.0" prefWidth="240.0" style="-fx-background-color: #eee8e8;" />
-      <TextField layoutX="192.0" layoutY="237.0" prefHeight="27.0" prefWidth="240.0" style="-fx-background-color: #eee8e8;" />
+      <TextField fx:id="campoMatricula" layoutX="192.0" layoutY="57.0" prefHeight="27.0" prefWidth="240.0" style="-fx-background-color: #eee8e8;" />
+      <TextField fx:id="campoMarca" layoutX="192.0" layoutY="117.0" prefHeight="27.0" prefWidth="240.0" style="-fx-background-color: #eee8e8;" />
+      <TextField fx:id="campoModelo" layoutX="192.0" layoutY="177.0" prefHeight="27.0" prefWidth="240.0" style="-fx-background-color: #eee8e8;" />
+      <TextField fx:id="campoCor" layoutX="192.0" layoutY="237.0" prefHeight="27.0" prefWidth="240.0" style="-fx-background-color: #eee8e8;" />
       <Label layoutX="44.0" layoutY="122.0" text="Marca*" />
       <Label layoutX="44.0" layoutY="183.0" text="Modelo*" />
       <Label layoutX="44.0" layoutY="243.0" text="Cor*" />
-      <JFXButton fx:id="btnCancelar" layoutX="278.0" layoutY="298.0" style="-fx-background-color: black;" text="Cancelar" textFill="#e7e1e1" />
-      <JFXButton fx:id="btnGuardar" layoutX="359.0" layoutY="298.0" prefHeight="27.0" prefWidth="73.0" style="-fx-background-color: #981f33;" text="Guardar" textFill="WHITE" />
+      <JFXButton fx:id="btnCancelar" layoutX="278.0" layoutY="298.0" onAction="#handlebtnCancelar" style="-fx-background-color: black;" text="Cancelar" textFill="#e7e1e1" />
+      <JFXButton fx:id="btnGuardar" layoutX="359.0" layoutY="298.0" onAction="#handlebtnGuardar" prefHeight="27.0" prefWidth="73.0" style="-fx-background-color: #981f33;" text="Guardar" textFill="WHITE" />
    </children>
 </AnchorPane>
