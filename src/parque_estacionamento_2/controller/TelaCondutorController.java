@@ -4,12 +4,9 @@ package parque_estacionamento_2.controller;
 import com.jfoenix.controls.JFXButton;
 import java.net.URL;
 import java.sql.Connection;
-import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.ResourceBundle;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
@@ -60,7 +57,7 @@ public class TelaCondutorController implements Initializable {
     private JFXButton btnAdicionarCondutor;
 
     @FXML
-    private JFXButton btnEditarVeiculo;
+    private JFXButton btnEditarCondutor;
 
     @FXML
     private JFXButton btnEliminarCondutor;
@@ -71,14 +68,26 @@ public class TelaCondutorController implements Initializable {
     
     Database database=DatabaseFactory.getDatabase();
     Connection conexao=database.conectar();
-    condutorDAO condutordao;
+
+     condutorDAO condutorDAO=new condutorDAO();   
+    
   
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         
-          //condutordao.setConexao(conexao);
-            carregarTabelaCondutor();
+
+        
+       
+        
+        condutorDAO.setConexao(conexao);
+        carregarTabelaCondutor();
+     
+     
+//    for(Condutor c:listaCondutor){
+//    System.out.println(c.getIdCartao()+"/"+c.getNome_Completo()+"/"+c.getSexo()+"/"+c.getEmail()+"/"+c.getData()+"/"+c.getTipo()+"/"+c.getBI()+"/"+c.getNIF()+"/"+c.getIdCartao());
+//    
+//    }
         
     }
 
@@ -88,14 +97,14 @@ public class TelaCondutorController implements Initializable {
         
         colunaID.setCellValueFactory(new PropertyValueFactory("idCondutor"));
         colunaNomeCompleto.setCellValueFactory(new PropertyValueFactory("nomeCompleto"));
-        colunaBI.setCellValueFactory(new PropertyValueFactory("bi"));
-        colunaNIF.setCellValueFactory(new PropertyValueFactory("nif"));
-        colunaSexo.setCellValueFactory(new PropertyValueFactory("sexo"));
-        colunaData.setCellValueFactory(new PropertyValueFactory("dataNascimento"));
-        colunaTipo.setCellValueFactory(new PropertyValueFactory("tipo"));
-        colunaCartao.setCellValueFactory(new PropertyValueFactory("Cartao_idCartao"));
+        colunaBI.setCellValueFactory(new PropertyValueFactory("BI"));
+        colunaNIF.setCellValueFactory(new PropertyValueFactory("NIF"));
+        colunaSexo.setCellValueFactory(new PropertyValueFactory("Sexo"));
+        colunaData.setCellValueFactory(new PropertyValueFactory("Data"));
+        colunaTipo.setCellValueFactory(new PropertyValueFactory("Tipo"));
+        colunaCartao.setCellValueFactory(new PropertyValueFactory("idCartao"));
         
-        listaCondutor=condutordao.listarCondutor();
+        listaCondutor=condutorDAO.listarCondutor();
         
         
         observableList=FXCollections.observableArrayList(listaCondutor);

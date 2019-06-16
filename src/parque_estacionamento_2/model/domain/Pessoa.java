@@ -6,21 +6,21 @@ import java.util.Date;
 
 public class Pessoa {
     
-    private String Nome_Completo;
+    private String nomeCompleto;
     private int BI;
     private int NIF;
     private String Sexo;
-    private String Data;
+    private Date Data;
     private String email;
 
-    public String getNome_Completo() {
-        return Nome_Completo;
+    public String getNomeCompleto() {
+        return nomeCompleto;
     }
 
-    public void setNome_Completo(String Nome) {
-        this.Nome_Completo = Nome;
+    public void setNomeCompleto(String nomeCompleto) {
+        this.nomeCompleto = nomeCompleto;
     }
-
+    
     public int getBI() {
         return BI;
     }
@@ -45,11 +45,11 @@ public class Pessoa {
         this.Sexo = Sexo;
     }
 
-    public String getData() {
+    public Date getData() {
         return Data;
     }
 
-    public void setData(String Data) {
+    public void setData(Date Data) {
         this.Data = Data;
     }
 

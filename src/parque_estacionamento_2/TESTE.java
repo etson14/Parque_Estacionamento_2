@@ -6,8 +6,12 @@
 package parque_estacionamento_2;
 
 import java.sql.Connection;
+import java.util.ArrayList;
+import java.util.List;
+import parque_estacionamento_2.model.dao.condutorDAO;
 import parque_estacionamento_2.model.database.Database;
 import parque_estacionamento_2.model.database.DatabaseFactory;
+import parque_estacionamento_2.model.domain.Condutor;
 
 /**
  *
@@ -15,10 +19,21 @@ import parque_estacionamento_2.model.database.DatabaseFactory;
  */
 public class TESTE {
     public static void main(String[] args) {
-        Database db=DatabaseFactory.getDatabase();
-        Connection conn=db.conectar();
-        System.out.println("conectado com sucesso!");
-        db.conectar();
+        List<Condutor> listaCondutor=new ArrayList<Condutor>();
+        Database database=DatabaseFactory.getDatabase();
+        Connection conexao=database.conectar();
+        condutorDAO condutorDAO=new condutorDAO();
+        
+        //condutorDAO.setConexao(conexao);
+        listaCondutor=condutorDAO.listarCondutor();
+        
+        for(Condutor c:listaCondutor){
+            System.out.println(c.getIdCartao()+"/"+c.getNomeCompleto()+"/"+c.getSexo()+"/"+c.getEmail()+"/"+c.getData()+"/"+c.getTipo()+"/"+c.getBI()+"/"+c.getNIF()+"/"+c.getIdCartao());
+//    
+        }
+        
+        
+        
         
     }
 }

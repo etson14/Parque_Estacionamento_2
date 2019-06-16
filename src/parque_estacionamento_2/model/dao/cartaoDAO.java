@@ -40,6 +40,8 @@ public class cartaoDAO {
                 cartao.setEstado(rs.getString("estado"));
                 listaCartao.add(cartao);
                 
+                
+                System.out.println(cartao.getIdCartao()+"/"+cartao.getnCartao()+"/"+cartao.getEstado());
             }
             
         } catch (SQLException ex) {

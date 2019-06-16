@@ -40,6 +40,7 @@ public class veiculoDAO {
     List<Veiculo> listaVeiculo=new ArrayList<Veiculo>();
     
         try {
+            
             PreparedStatement stmt=conexao.prepareStatement(sql);
             ResultSet rs=stmt.executeQuery();
             

@@ -19,7 +19,7 @@ import parque_estacionamento_2.model.dao.cartaoDAO;
 import parque_estacionamento_2.model.database.Database;
 import parque_estacionamento_2.model.database.DatabaseFactory;
 import parque_estacionamento_2.model.domain.Cartao;
-import parque_estacionamento_2.model.domain.Veiculo;
+
 
 
 public class TelaCartaoController implements Initializable {
@@ -61,8 +61,8 @@ public class TelaCartaoController implements Initializable {
     
     public void carregarTelaCartao(){
         
-        colunaNumero.setCellValueFactory(new PropertyValueFactory("idCartao"));
-        colunaID.setCellValueFactory(new PropertyValueFactory("numeroCartao"));
+        colunaID.setCellValueFactory(new PropertyValueFactory("idCartao"));
+        colunaNumero.setCellValueFactory(new PropertyValueFactory("numeroCartao"));
         colunaEstado.setCellValueFactory(new PropertyValueFactory("estado"));
         
         
@@ -82,6 +82,7 @@ public class TelaCartaoController implements Initializable {
     
     public void updateCartaoAtivo(){
         Cartao cartao=tabelaCartao.getSelectionModel().getSelectedItem();
+        
         
         
         if(cartao!=null){

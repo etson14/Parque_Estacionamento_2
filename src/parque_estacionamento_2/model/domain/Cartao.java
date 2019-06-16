@@ -4,7 +4,7 @@ package parque_estacionamento_2.model.domain;
 
 public class Cartao {
     private int idCartao;
-    private int nCartao;
+    private int numeroCartao;
     private String estado;
 
     public int getIdCartao() {
@@ -16,11 +16,11 @@ public class Cartao {
     }
 
     public int getnCartao() {
-        return nCartao;
+        return numeroCartao;
     }
 
     public void setnCartao(int nCartao) {
-        this.nCartao = nCartao;
+        this.numeroCartao = nCartao;
     }
 
     public String getEstado() {

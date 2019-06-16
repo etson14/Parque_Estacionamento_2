@@ -7,24 +7,22 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane id="AnchorPane" prefHeight="486.0" prefWidth="587.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="parque_estacionamento_2.controller.TelaAdicionarRegistoController">
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="484.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="parque_estacionamento_2.controller.TelaAdicionarRegistoController">
     <stylesheets>
         <URL value="@/parque_estacionamento_2/content/telaadicionarregisto.css" />
     </stylesheets>
    <children>
-      <Label layoutX="54.0" layoutY="72.0" text="Numero Matricula*" />
-      <TextField layoutX="202.0" layoutY="67.0" prefHeight="27.0" prefWidth="337.0" style="-fx-background-color: #eee8e8;" />
-      <TextField disable="true" layoutX="202.0" layoutY="127.0" prefHeight="27.0" prefWidth="337.0" style="-fx-background-color: #eee8e8;" />
-      <TextField layoutX="202.0" layoutY="248.0" prefHeight="27.0" prefWidth="337.0" style="-fx-background-color: #eee8e8;" />
-      <Label layoutX="54.0" layoutY="132.0" text="Data*" />
-      <Label layoutX="54.0" layoutY="193.0" text="Tipo*" />
-      <Label layoutX="54.0" layoutY="253.0" text="Condutor*" />
-      <Label layoutX="54.0" layoutY="315.0" text="Veiculo*" />
-      <JFXButton fx:id="btnCancelar" layoutX="387.0" layoutY="425.0" style="-fx-background-color: black;" text="Cancelar" textFill="#e7e1e1" />
-      <JFXButton fx:id="btnGuardar" layoutX="468.0" layoutY="425.0" prefHeight="27.0" prefWidth="73.0" style="-fx-background-color: #981f33;" text="Guardar" textFill="WHITE" />
-      <ComboBox fx:id="cbTipo1" layoutX="200.0" layoutY="190.0" prefHeight="27.0" prefWidth="337.0" style="-fx-background-color: #eee8e8;" />
-      <TextField layoutX="202.0" layoutY="311.0" prefHeight="27.0" prefWidth="337.0" style="-fx-background-color: #eee8e8;" />
-      <Label layoutX="54.0" layoutY="375.0" text="Seguranca*" />
-      <TextField layoutX="202.0" layoutY="371.0" prefHeight="27.0" prefWidth="337.0" style="-fx-background-color: #eee8e8;" />
+      <TextField fx:id="campoData" editable="false" layoutX="198.0" layoutY="47.0" prefHeight="27.0" prefWidth="234.0" style="-fx-background-color: #eee8e8;" AnchorPane.rightAnchor="52.0" />
+      <TextField fx:id="campoCondutor" layoutX="198.0" layoutY="222.0" prefHeight="27.0" prefWidth="234.0" style="-fx-background-color: #eee8e8;" AnchorPane.rightAnchor="52.0" />
+      <Label layoutX="44.0" layoutY="52.0" text="Data*" AnchorPane.leftAnchor="44.0" />
+      <Label layoutX="44.0" layoutY="167.0" text="Tipo*" AnchorPane.leftAnchor="44.0" />
+      <Label layoutX="44.0" layoutY="227.0" text="Condutor*" AnchorPane.leftAnchor="44.0" />
+      <Label layoutX="44.0" layoutY="289.0" text="Veiculo*" AnchorPane.leftAnchor="44.0" />
+      <JFXButton fx:id="btnCancelar" layoutX="281.0" layoutY="380.0" style="-fx-background-color: black;" text="Cancelar" textFill="#e7e1e1" AnchorPane.bottomAnchor="33.0" />
+      <JFXButton fx:id="btnGuardar" layoutX="359.0" layoutY="380.0" prefHeight="27.0" prefWidth="73.0" style="-fx-background-color: #981f33;" text="Guardar" textFill="WHITE" AnchorPane.bottomAnchor="33.0" AnchorPane.rightAnchor="52.0" />
+      <ComboBox fx:id="campoTipo" layoutX="198.0" layoutY="164.0" prefHeight="27.0" prefWidth="234.0" style="-fx-background-color: #eee8e8;" AnchorPane.rightAnchor="52.0" AnchorPane.topAnchor="164.0" />
+      <TextField fx:id="campoVeiculo" layoutX="198.0" layoutY="285.0" prefHeight="27.0" prefWidth="234.0" style="-fx-background-color: #eee8e8;" AnchorPane.rightAnchor="52.0" />
+      <TextField fx:id="campoHora" editable="false" layoutX="198.0" layoutY="104.0" prefHeight="27.0" prefWidth="234.0" style="-fx-background-color: #eee8e8;" AnchorPane.rightAnchor="52.0" AnchorPane.topAnchor="104.0" />
+      <Label layoutX="44.0" layoutY="110.0" text="Hora*" AnchorPane.leftAnchor="44.0" AnchorPane.topAnchor="110.0" />
    </children>
 </AnchorPane>
