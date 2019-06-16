@@ -8,6 +8,7 @@ package parque_estacionamento_2;
 import java.sql.Connection;
 import java.util.ArrayList;
 import java.util.List;
+import javax.swing.JOptionPane;
 import parque_estacionamento_2.model.dao.condutorDAO;
 import parque_estacionamento_2.model.database.Database;
 import parque_estacionamento_2.model.database.DatabaseFactory;
@@ -24,13 +25,15 @@ public class TESTE {
         Connection conexao=database.conectar();
         condutorDAO condutorDAO=new condutorDAO();
         
-        //condutorDAO.setConexao(conexao);
+        condutorDAO.setConexao(conexao);
         listaCondutor=condutorDAO.listarCondutor();
         
         for(Condutor c:listaCondutor){
             System.out.println(c.getIdCartao()+"/"+c.getNomeCompleto()+"/"+c.getSexo()+"/"+c.getEmail()+"/"+c.getData()+"/"+c.getTipo()+"/"+c.getBI()+"/"+c.getNIF()+"/"+c.getIdCartao());
 //    
         }
+        
+        JOptionPane.showMessageDialog(null,"Erro!");
         
         
         

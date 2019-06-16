@@ -6,6 +6,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import javax.swing.JOptionPane;
 
 
 public class Parque_Estacionamento_2 extends Application {
@@ -21,6 +22,8 @@ public class Parque_Estacionamento_2 extends Application {
         stage.setResizable(false);
         stage.setScene(scene);
         stage.show();
+        
+        JOptionPane.showMessageDialog(null,"Erro!");
 
         
     }
