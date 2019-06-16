@@ -8,7 +8,7 @@
   </information>
   <resources>
     <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
-    <jar href="Parque_Estacionamento_2.jar" size="11145025" download="eager" />
+    <jar href="Parque_Estacionamento_2.jar" size="11153789" download="eager" />
     <jar href="lib/controlsfx-8.40.14.jar" size="1215643" download="eager" />
     <jar href="lib/jfoenix-8.0.8.jar" size="2708772" download="eager" />
     <jar href="lib/jfxtras-labs-samples-8.0-r6-SNAPSHOT-all.jar" size="4785232" download="eager" />

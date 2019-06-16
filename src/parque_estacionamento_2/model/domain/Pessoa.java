@@ -6,43 +6,34 @@ import java.util.Date;
 
 public class Pessoa {
     
-    private String Nome;
-    private String Apelido;
-    private String BI;
-    private String NIF;
+    private String Nome_Completo;
+    private int BI;
+    private int NIF;
     private String Sexo;
-    private Date Data;
+    private String Data;
     private String email;
 
-    public String getNome() {
-        return Nome;
+    public String getNome_Completo() {
+        return Nome_Completo;
     }
 
-    public void setNome(String Nome) {
-        this.Nome = Nome;
+    public void setNome_Completo(String Nome) {
+        this.Nome_Completo = Nome;
     }
 
-    public String getApelido() {
-        return Apelido;
-    }
-
-    public void setApelido(String Apelido) {
-        this.Apelido = Apelido;
-    }
-
-    public String getBI() {
+    public int getBI() {
         return BI;
     }
 
-    public void setBI(String BI) {
+    public void setBI(int BI) {
         this.BI = BI;
     }
 
-    public String getNIF() {
+    public int getNIF() {
         return NIF;
     }
 
-    public void setNIF(String NIF) {
+    public void setNIF(int NIF) {
         this.NIF = NIF;
     }
 
@@ -54,11 +45,11 @@ public class Pessoa {
         this.Sexo = Sexo;
     }
 
-    public Date getData() {
+    public String getData() {
         return Data;
     }
 
-    public void setData(Date Data) {
+    public void setData(String Data) {
         this.Data = Data;
     }
 
