@@ -15,12 +15,12 @@ public class Cartao {
         this.idCartao = idCartao;
     }
 
-    public int getnCartao() {
+    public int getNumeroCartao() {
         return numeroCartao;
     }
 
-    public void setnCartao(int nCartao) {
-        this.numeroCartao = nCartao;
+    public void setNumeroCartao(int numeroCartao) {
+        this.numeroCartao = numeroCartao;
     }
 
     public String getEstado() {
@@ -29,9 +29,6 @@ public class Cartao {
 
     public void setEstado(String estado) {
         this.estado = estado;
-    }
-    
-    
-            
+    }    
     
 }

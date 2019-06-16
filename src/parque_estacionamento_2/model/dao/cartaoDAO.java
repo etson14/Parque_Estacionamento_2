@@ -36,12 +36,12 @@ public class cartaoDAO {
                 
                 Cartao cartao=new Cartao();
                 cartao.setIdCartao(rs.getInt("idCartao"));
-                cartao.setnCartao(rs.getInt("numeroCartao"));
+                cartao.setNumeroCartao(rs.getInt("numeroCartao"));
                 cartao.setEstado(rs.getString("estado"));
                 listaCartao.add(cartao);
                 
                 
-                System.out.println(cartao.getIdCartao()+"/"+cartao.getnCartao()+"/"+cartao.getEstado());
+                System.out.println(cartao.getIdCartao()+"/"+cartao.getNumeroCartao()+"/"+cartao.getEstado());
             }
             
         } catch (SQLException ex) {
@@ -58,7 +58,7 @@ public class cartaoDAO {
         PreparedStatement stmt;
         try {
             stmt = conexao.prepareStatement(sql);
-            stmt.setInt(1, cartao.getnCartao());
+            stmt.setInt(1, cartao.getNumeroCartao());
             stmt.setString(2, cartao.getEstado());
             stmt.execute();
             return true;
